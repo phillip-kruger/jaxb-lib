@@ -21,3 +21,8 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/jaxb-examples/jaxb-example-pojo/target/
+/jaxb-examples/jaxb-example-bad/target/
+/jaxb-examples/target/
+/jaxb-basic-example/target/
+/jaxb-server-example/target/
