@@ -150,7 +150,8 @@
         </profile>
     </profiles>
     <modules>
-        <module>jaxb-basic-example</module>
-        <module>jaxb-server-example</module>
+        <module>jaxb-batch-example</module>
+        <module>jaxb-concurrency-example</module>
+        <module>jaxb-size-example</module>
     </modules>
 </project>

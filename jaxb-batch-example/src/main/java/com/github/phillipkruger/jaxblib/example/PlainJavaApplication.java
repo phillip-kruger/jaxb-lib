@@ -14,7 +14,7 @@ import lombok.extern.java.Log;
 @Log
 public class PlainJavaApplication {
     
-    private final DummyData dummyData = new DummyData(100000);
+    private final DummyData dummyData = new DummyData(10000);
     
     private final BadJAXBUtil bad = new BadJAXBUtil();
     private final GoodJAXBUtil good = new GoodJAXBUtil();

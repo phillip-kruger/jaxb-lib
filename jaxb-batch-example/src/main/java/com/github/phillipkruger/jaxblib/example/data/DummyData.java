@@ -1,6 +1,7 @@
 package com.github.phillipkruger.jaxblib.example.data;
 
 import com.github.phillipkruger.jaxblib.example.pojo.Address;
+import com.github.phillipkruger.jaxblib.example.pojo.Crap;
 import com.github.phillipkruger.jaxblib.example.pojo.Gender;
 import com.github.phillipkruger.jaxblib.example.pojo.Membership;
 import com.github.phillipkruger.jaxblib.example.pojo.Person;
@@ -20,24 +21,143 @@ public class DummyData {
     private final int size;
     
     public DummyData(int size){
-        this.size = size;
-        this.memberships = createMemberships(size);
+        this(size,false);
     }
     
-    private List<Membership> createMemberships(int numberOfMembers){
+    public DummyData(int size, boolean largeXml){
+        this.size = size;
+        this.memberships = createMemberships(size,largeXml);
+    }
+    
+    private List<Membership> createMemberships(int numberOfMembers,boolean largeXml){
         List<Membership> m = new ArrayList<>();
         for(int i=0;i<numberOfMembers;i++){
-            m.add(createMembership());
+            m.add(createMembership(largeXml));
         }
+        
         return m;
     }
     
-    private Membership createMembership(){
+    private Membership createMembership(boolean largeXml){
         Membership m = new Membership();
         m.setMembershipId(random.nextInt(999999999));
         m.setType(createType());
         m.setOwner(createPerson());
+        
+        
+        if(largeXml){
+            // Let's add some random stuff just to make the object large
+            for(int i=0;i<100;i++){
+                m.getCraps().add(createCrap());
+            }
+        }
+        
         return m;
+    }
+    
+    private Crap createCrap(){
+        Crap crap = new Crap();
+        crap.setCrap1(randomString());
+        crap.setCrap2(randomString());
+        crap.setCrap3(randomString());
+        crap.setCrap4(randomString());
+        crap.setCrap5(randomString());
+        crap.setCrap6(randomString());
+        crap.setCrap7(randomString());
+        crap.setCrap8(randomString());
+        crap.setCrap9(randomString());
+        crap.setCrap10(randomString());
+        crap.setCrap11(randomString());
+        crap.setCrap12(randomString());
+        crap.setCrap13(randomString());
+        crap.setCrap14(randomString());
+        crap.setCrap15(randomString());
+        crap.setCrap16(randomString());
+        crap.setCrap17(randomString());
+        crap.setCrap18(randomString());
+        crap.setCrap19(randomString());
+        crap.setCrap20(randomString());
+        crap.setCrap21(randomString());
+        crap.setCrap22(randomString());
+        crap.setCrap23(randomString());
+        crap.setCrap24(randomString());
+        crap.setCrap25(randomString());
+        crap.setCrap26(randomString());
+        crap.setCrap27(randomString());
+        crap.setCrap28(randomString());
+        crap.setCrap29(randomString());
+        crap.setCrap30(randomString());
+        crap.setCrap31(randomString());
+        crap.setCrap32(randomString());
+        crap.setCrap33(randomString());
+        crap.setCrap34(randomString());
+        crap.setCrap35(randomString());
+        crap.setCrap36(randomString());
+        crap.setCrap37(randomString());
+        crap.setCrap38(randomString());
+        crap.setCrap39(randomString());
+        crap.setCrap40(randomString());
+        crap.setCrap41(randomString());
+        crap.setCrap42(randomString());
+        crap.setCrap43(randomString());
+        crap.setCrap44(randomString());
+        crap.setCrap45(randomString());
+        crap.setCrap46(randomString());
+        crap.setCrap47(randomString());
+        crap.setCrap48(randomString());
+        crap.setCrap49(randomString());
+        crap.setCrap50(randomString());
+        crap.setCrap51(randomString());
+        crap.setCrap52(randomString());
+        crap.setCrap53(randomString());
+        crap.setCrap54(randomString());
+        crap.setCrap55(randomString());
+        crap.setCrap56(randomString());
+        crap.setCrap57(randomString());
+        crap.setCrap58(randomString());
+        crap.setCrap59(randomString());
+        crap.setCrap60(randomString());
+        crap.setCrap61(randomString());
+        crap.setCrap62(randomString());
+        crap.setCrap63(randomString());
+        crap.setCrap64(randomString());
+        crap.setCrap65(randomString());
+        crap.setCrap66(randomString());
+        crap.setCrap67(randomString());
+        crap.setCrap68(randomString());
+        crap.setCrap69(randomString());
+        crap.setCrap70(randomString());
+        crap.setCrap71(randomString());
+        crap.setCrap72(randomString());
+        crap.setCrap73(randomString());
+        crap.setCrap74(randomString());
+        crap.setCrap75(randomString());
+        crap.setCrap76(randomString());
+        crap.setCrap77(randomString());
+        crap.setCrap78(randomString());
+        crap.setCrap79(randomString());
+        crap.setCrap80(randomString());
+        crap.setCrap81(randomString());
+        crap.setCrap82(randomString());
+        crap.setCrap83(randomString());
+        crap.setCrap84(randomString());
+        crap.setCrap85(randomString());
+        crap.setCrap86(randomString());
+        crap.setCrap87(randomString());
+        crap.setCrap88(randomString());
+        crap.setCrap89(randomString());
+        crap.setCrap90(randomString());
+        crap.setCrap91(randomString());
+        crap.setCrap92(randomString());
+        crap.setCrap93(randomString());
+        crap.setCrap94(randomString());
+        crap.setCrap95(randomString());
+        crap.setCrap96(randomString());
+        crap.setCrap97(randomString());
+        crap.setCrap98(randomString());
+        crap.setCrap99(randomString());
+        crap.setCrap100(randomString());
+        return crap;
     }
     
     private Type createType(){
@@ -83,6 +203,17 @@ public class DummyData {
         }
         return stringWriter.toString();
     }
+    
+    private String randomString(){
+        StringWriter stringWriter = new StringWriter();
+        
+        int length = 1000;
+        for(int i=0;i<length;i++){
+            stringWriter.append(alphabet[random.nextInt(alphabet.length)]);
+        }
+        return stringWriter.toString();
+    }
+    
     
     private BigInteger randomZipCode(){
         StringWriter stringWriter = new StringWriter();

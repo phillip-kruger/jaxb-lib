@@ -9,11 +9,11 @@
     </parent>
     
     <groupId>com.github.phillip-kruger.jaxb-lib</groupId>
-    <artifactId>jaxb-server-example</artifactId>
+    <artifactId>jaxb-size-example</artifactId>
     <packaging>war</packaging>
     
-    <name>JAXB Lib : Server Example</name>
-    <description>Some example on an application server</description>
+    <name>JAXB Lib : Size Example</name>
+    <description>Some large files example on an application server</description>
     
     <properties>
         <version.thorntail>2.4.0.Final</version.thorntail>
@@ -57,7 +57,7 @@
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>jaxb-basic-example</artifactId>
+            <artifactId>jaxb-batch-example</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>

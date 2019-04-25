@@ -9,10 +9,10 @@
     </parent>
     
     <groupId>com.github.phillip-kruger.jaxb-lib</groupId>
-    <artifactId>jaxb-basic-example</artifactId>
+    <artifactId>jaxb-batch-example</artifactId>
     <packaging>jar</packaging>
     
-    <name>JAXB Lib : Basic Example</name>
+    <name>JAXB Lib : Batch Example</name>
     <description>Some examples</description>
     
 </project>
