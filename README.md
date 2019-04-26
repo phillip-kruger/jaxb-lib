@@ -1,2 +1,3 @@
 # jaxb-lib
-Simple library to help with JAXB
+
+Some JAXB examples and a simple library to help with JAXB
