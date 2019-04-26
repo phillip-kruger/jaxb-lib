@@ -31,3 +31,4 @@ hs_err_pid*
 /jaxb-size-example/target/
 /jaxb-size-example/nbproject/
 /jaxb-lib/target/
+/jaxb-lib/nbproject/
