@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <actions>
         <action>
-            <actionName>CUSTOM-mvn thorntail:run</actionName>
-            <displayName>mvn thorntail:run</displayName>
+            <actionName>CUSTOM-JUnit Test</actionName>
+            <displayName>JUnit Test</displayName>
             <goals>
-                <goal>thorntail:run</goal>
+                <goal>clean</goal>
+                <goal>install</goal>
             </goals>
+            <properties>
+                <Xmx>128M</Xmx>
+                
+            </properties>
         </action>
     </actions>

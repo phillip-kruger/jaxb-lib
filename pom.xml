@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     
     <groupId>com.github.phillip-kruger</groupId>
-    <artifactId>jaxb-lib</artifactId>
+    <artifactId>jaxb-library</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     
@@ -149,9 +149,11 @@
             </build>
         </profile>
     </profiles>
+    
     <modules>
         <module>jaxb-batch-example</module>
         <module>jaxb-concurrency-example</module>
         <module>jaxb-size-example</module>
+        <module>jaxb-lib</module>
     </modules>
 </project>

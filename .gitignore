@@ -29,3 +29,5 @@ hs_err_pid*
 /jaxb-batch-example/target/
 /jaxb-concurrency-example/target/
 /jaxb-size-example/target/
+/jaxb-size-example/nbproject/
+/jaxb-lib/target/

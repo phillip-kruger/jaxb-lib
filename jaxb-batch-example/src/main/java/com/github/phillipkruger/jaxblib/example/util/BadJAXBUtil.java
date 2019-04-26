@@ -2,6 +2,7 @@ package com.github.phillipkruger.jaxblib.example.util;
 
 import com.github.phillipkruger.jaxblib.example.pojo.Membership;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.StringReader;
 import java.io.StringWriter;
 import javax.xml.bind.JAXBContext;
@@ -39,6 +40,17 @@ public class BadJAXBUtil implements JAXBUtil {
         }
     }
 
+    @Override
+    public Membership unmarshal(InputStream xml) {
+        try {
+            JAXBContext context = JAXBContext.newInstance(Membership.class);
+            Unmarshaller u = context.createUnmarshaller();
+            return (Membership)u.unmarshal(xml);
+        }catch (JAXBException ex) {
+            throw new RuntimeException(ex);
+        }
+    }
+    
     @Override
     public String getName() {
         return "Bad";
