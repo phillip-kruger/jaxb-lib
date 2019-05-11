@@ -26,16 +26,14 @@
     </scm>
 
     <distributionManagement>
-        <!--  Publish versioned releases here  -->
-        <repository>
-            <id>nexus-release</id>
-            <url>${nexus.url.release}</url>
-        </repository>
-        <!--  Publish snapshots here  -->
         <snapshotRepository>
-            <id>nexus-snapshot</id>
-            <url>${nexus.url.snapshot}</url>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
     </distributionManagement>
 
     <developers>
